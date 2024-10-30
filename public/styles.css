@@ -1,0 +1,84 @@
+/* styles.css */
+
+/* Background gradient with subtle dark colors for a night sky */
+body {
+    margin: 0;
+    overflow: hidden;
+    background: radial-gradient(circle, #000010, #0d1b2a);
+    color: #f1f1f1;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Centered header styling */
+h1 {
+    color: #00d8ff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Description paragraph styling */
+p {
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+/* Button styling for consistency */
+.api-button {
+    background-color: #333;
+    color: #f1f1f1;
+    border: none;
+    padding: 12px 24px;
+    margin: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for buttons */
+.api-button:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+/* Input and button container styling */
+div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the factorial input */
+#factorial-input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 150px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2e2e2e;
+    color: #f1f1f1;
+}
+
+/* Result display box styling */
+#result {
+    padding: 15px;
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #ffffff;
+    margin-top: 20px;
+}
