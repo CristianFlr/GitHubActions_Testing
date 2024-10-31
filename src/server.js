@@ -1,4 +1,5 @@
 const express = require('express');
+const factorial = require('./factorial'); // Import the factorial function
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -27,11 +28,14 @@ app.get('/api/factorial/:number', (req, res) => {
         return res.status(400).json({ error: 'Invalid number' });
     }
 
-    const factorial = (num) => (num <= 1 ? 1 : num * factorial(num - 1));
     res.json({ number, factorial: factorial(number) });
 });
 
 // Start the server
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+if (process.env.NODE_ENV !== 'test') {
+    app.listen(PORT, () => {
+        console.log(`Server running on http://localhost:${PORT}`);
+    });
+}
+
+module.exports = app; // Export app for testing
