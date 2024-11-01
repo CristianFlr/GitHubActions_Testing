@@ -10,7 +10,7 @@ describe('Integration Tests for Express Server', () => {
     });
 
     test('GET /api/todos should return a list of todos', async () => {
-        const response = await request(app).get('/api/todosss');
+        const response = await request(app).get('/api/todos');
         expect(response.statusCode).toBe(200);
         expect(response.body).toEqual([
             { id: 1, task: 'Learn GitHub Actions', completed: false },
